@@ -8,6 +8,13 @@ export default {
     buildModules: [
         '@pinia/nuxt',
     ],
+    css: ['~/assets/main.css'],
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
     modules: [],
     build: {},
   }

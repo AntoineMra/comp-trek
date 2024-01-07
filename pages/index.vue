@@ -1,7 +1,12 @@
 <template>
   <AppHeader />
   <main>
-    
+    <h1 class="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+    <div class="p-4">
+    <button class="btn">Hello daisyUI</button>
+  </div>
   </main>
 </template>
 
