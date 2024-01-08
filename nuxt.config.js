@@ -1,3 +1,4 @@
+// File: nuxt.config.js
 export default {
     ssr: true, // Activer le SSR
     head: {
@@ -9,12 +10,13 @@ export default {
         '@pinia/nuxt',
     ],
     css: ['~/assets/main.css'],
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
+    modules: [],
+    build: {
+      postcss: {
+        plugins: {
+          'tailwindcss': require('tailwindcss'),
+          'autoprefixer': require('autoprefixer'),
+        },
       },
     },
-    modules: [],
-    build: {},
   }

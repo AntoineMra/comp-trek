@@ -9,6 +9,17 @@ module.exports = {
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier/skip-formatting'
   ],
+  rules: {
+    "max-len": [
+      "warn",
+      {
+        code: 100,
+        ignoreComments: true,
+        ignoreTrailingComments: true,
+        ignoreUrls: true,
+      },
+    ],
+  },
   overrides: [
     {
       files: [
