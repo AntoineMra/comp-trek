@@ -1,22 +1,26 @@
 <template>
   <footer class="footer p-10 bg-neutral text-neutral-content">
     <nav>
-      <header class="footer-title">Services</header> 
-      <a class="link link-hover">Branding</a>
-      <a class="link link-hover">Design</a>
-      <a class="link link-hover">Marketing</a>
-      <a class="link link-hover">Advertisement</a>
-    </nav> 
+      <header class="footer-title">Ressources</header>
+      <NuxtLink to="/cookies" class="link link-hover">Branding</NuxtLink>
+      <NuxtLink to="/cookies" class="link link-hover">Design</NuxtLink>
+      <NuxtLink to="/cookies" class="link link-hover">Marketing</NuxtLink>
+      <NuxtLink to="/cookies" class="link link-hover">Advertisement</NuxtLink>
+    </nav>
     <nav>
-      <header class="footer-title">Company</header> 
-      <a class="link link-hover">About us</a>
-      <a class="link link-hover">Contact</a>
-    </nav> 
+      <header class="footer-title">Company</header>
+      <NuxtLink to="/cookies" class="link link-hover">About us</NuxtLink>
+      <NuxtLink to="/cookies" class="link link-hover">Contact</NuxtLink>
+    </nav>
     <nav>
-      <header class="footer-title">Legal</header> 
-      <a class="link link-hover">Terms of use</a>
-      <a class="link link-hover">Privacy policy</a>
-      <a class="link link-hover">Cookie policy</a>
+      <header class="footer-title">Informations légales</header>
+      <NuxtLink to="/mentions-legales" class="link link-hover"
+        >Mentions générales</NuxtLink
+      >
+      <NuxtLink to="/politique-de-confidentialite" class="link link-hover"
+        >Politique de confidentialité</NuxtLink
+      >
+      <NuxtLink to="/affiliate" class="link link-hover">Affiliation</NuxtLink>
     </nav>
   </footer>
 </template>
