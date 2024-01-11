@@ -9,6 +9,12 @@ module.exports = {
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier/skip-formatting'
   ],
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+    mocha: true,
+  },
   rules: {
     "max-len": [
       "warn",

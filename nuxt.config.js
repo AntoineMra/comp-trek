@@ -8,15 +8,14 @@ export default {
     components: true,
     buildModules: [
         '@pinia/nuxt',
+        '@nuxtjs/tailwindcss'
     ],
-    css: ['~/assets/main.css'],
+    css: ['@/assets/main.css'],
     modules: [],
-    build: {
-      postcss: {
-        plugins: {
-          'tailwindcss': require('tailwindcss'),
-          'autoprefixer': require('autoprefixer'),
-        },
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
       },
     },
   }
