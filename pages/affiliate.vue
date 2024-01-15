@@ -7,7 +7,7 @@
       </h1>
     </header>
 
-    <section class="max-w-2xl md:max-w-none mx-auto my-8 md:p-4 md:p-8">
+    <section class="max-w-2xl md:max-w-none mx-auto my-8 md:p-8">
       <p class="mb-4">
         L’utilisation des liens d’affiliations nous permet d’améliorer en
         continue nos analyses.
