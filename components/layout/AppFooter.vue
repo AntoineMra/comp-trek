@@ -25,25 +25,37 @@
       <NuxtLink to="/affiliate" class="link link-hover">Affiliation</NuxtLink>
     </nav>
     <form>
-      <header class="footer-title">Newsletter</header>
+      <header class="text-primary text-lg font-bold">Newsletter</header>
       <fieldset class="form-control w-80">
-        <label class="label">
-          <span class="label-text">Enter your email address</span>
+        <label class="label" for="newsletter">
+          <span class="label-text">Recevez nos derniers comparatifs !</span>
         </label>
         <div class="join">
           <input
+            id="newsletter"
             type="text"
-            placeholder="username@site.com"
+            placeholder="john.doe@gmail.com"
             class="input input-bordered join-item"
           />
-          <button class="btn btn-primary join-item">S'abonner</button>
+          <button
+            class="btn btn-primary join-item"
+            @submit="addToNewsletter"
+            type="submit"
+          >
+            S'abonner
+          </button>
         </div>
       </fieldset>
     </form>
   </footer>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const addToNewsletter = () => {
+  // Implement Mailchimp API
+  console.log("addToNewsletter");
+};
+</script>
 
 <style scoped>
 .footer {

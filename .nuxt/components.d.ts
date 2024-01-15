@@ -3,6 +3,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     'HeroComponent': typeof import("../components/HeroComponent.vue")['default']
     'UILogoIcon': typeof import("../components/UI/LogoIcon.vue")['default']
+    'LayoutAppBreadcrumb': typeof import("../components/layout/AppBreadcrumb.vue")['default']
     'LayoutAppFooter': typeof import("../components/layout/AppFooter.vue")['default']
     'LayoutAppHeader': typeof import("../components/layout/AppHeader.vue")['default']
     'ProductRichEditorParser': typeof import("../components/product/RichEditorParser.vue")['default']
@@ -28,6 +29,7 @@ declare module 'vue' {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyHeroComponent': typeof import("../components/HeroComponent.vue")['default']
     'LazyUILogoIcon': typeof import("../components/UI/LogoIcon.vue")['default']
+    'LazyLayoutAppBreadcrumb': typeof import("../components/layout/AppBreadcrumb.vue")['default']
     'LazyLayoutAppFooter': typeof import("../components/layout/AppFooter.vue")['default']
     'LazyLayoutAppHeader': typeof import("../components/layout/AppHeader.vue")['default']
     'LazyProductRichEditorParser': typeof import("../components/product/RichEditorParser.vue")['default']
@@ -56,6 +58,7 @@ declare module 'vue' {
 
 export const HeroComponent: typeof import("../components/HeroComponent.vue")['default']
 export const UILogoIcon: typeof import("../components/UI/LogoIcon.vue")['default']
+export const LayoutAppBreadcrumb: typeof import("../components/layout/AppBreadcrumb.vue")['default']
 export const LayoutAppFooter: typeof import("../components/layout/AppFooter.vue")['default']
 export const LayoutAppHeader: typeof import("../components/layout/AppHeader.vue")['default']
 export const ProductRichEditorParser: typeof import("../components/product/RichEditorParser.vue")['default']
@@ -81,6 +84,7 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyHeroComponent: typeof import("../components/HeroComponent.vue")['default']
 export const LazyUILogoIcon: typeof import("../components/UI/LogoIcon.vue")['default']
+export const LazyLayoutAppBreadcrumb: typeof import("../components/layout/AppBreadcrumb.vue")['default']
 export const LazyLayoutAppFooter: typeof import("../components/layout/AppFooter.vue")['default']
 export const LazyLayoutAppHeader: typeof import("../components/layout/AppHeader.vue")['default']
 export const LazyProductRichEditorParser: typeof import("../components/product/RichEditorParser.vue")['default']

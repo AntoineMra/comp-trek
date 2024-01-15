@@ -1,18 +1,13 @@
 <template>
   <main class="mx-10 my-5 lg:mx-80 lg:my-10 md:glass md:rounded">
     <header class="md:py-4 md:px-16">
-      <div class="text-sm breadcrumbs">
-        <ul>
-          <li><a class="link-primary">Légal</a></li>
-          <li>Affiliation</li>
-        </ul>
-      </div>
+      <AppBreadcrumb :breadcrumbItem="breadcrumb" />
       <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-primary pt-6">
         Vous apportez un point de vue de qualité est notre mission
       </h1>
     </header>
 
-    <section class="max-w-2xl mx-auto my-8 md:p-4 md:p-8">
+    <section class="max-w-2xl md:max-w-none mx-auto my-8 md:p-4 md:p-8">
       <p class="mb-4">
         L’utilisation des liens d’affiliations nous permet d’améliorer en
         continue nos analyses.
@@ -58,10 +53,24 @@
 
 <script setup lang="ts">
 import { defineComponent } from "vue";
+import AppBreadcrumb from "../components/layout/AppBreadcrumb.vue";
 
 defineComponent({
   name: "AffiliateComponent",
 });
+
+const breadcrumb = [
+  {
+    name: "Accueil",
+    path: "/",
+    order: 1,
+  },
+  {
+    name: "Affiliation",
+    path: "/affiliate",
+    order: 2,
+  },
+];
 </script>
 
 <style scoped></style>
