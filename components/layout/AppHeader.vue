@@ -11,13 +11,13 @@
       <nav class="flex-none">
         <ul class="menu menu-horizontal px-1 pr-8">
           <li class="px-2">
-            <NuxtLink class="font-semibold" to="products">Produits</NuxtLink>
+            <NuxtLink class="font-semibold" to="/products">Produits</NuxtLink>
           </li>
           <li class="px-2">
-            <NuxtLink class="font-semibold" to="kits">Kits & Packs</NuxtLink>
+            <NuxtLink class="font-semibold" to="/kits">Kits & Packs</NuxtLink>
           </li>
           <li class="px-2">
-            <NuxtLink class="font-semibold" to="blog">Blog</NuxtLink>
+            <NuxtLink class="font-semibold" to="/blog">Blog</NuxtLink>
           </li>
         </ul>
 

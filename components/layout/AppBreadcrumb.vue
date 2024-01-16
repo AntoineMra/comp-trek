@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, onBeforeMount, PropType } from "vue";
+import { onBeforeMount, PropType } from "vue";
 import type { BreadcrumbItem } from "../../interface/ui";
 
 const orderBreadcrumb = (breadcrumbItem: BreadcrumbItem[]) => {
