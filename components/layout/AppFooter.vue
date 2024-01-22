@@ -23,6 +23,7 @@
         >Politique de confidentialité</NuxtLink
       >
       <NuxtLink to="/affiliate" class="link link-hover">Affiliation</NuxtLink>
+      <NuxtLink to="/cookies" class="link link-hover">Cookies</NuxtLink>
     </nav>
     <form>
       <header class="text-primary text-lg font-bold">Newsletter</header>

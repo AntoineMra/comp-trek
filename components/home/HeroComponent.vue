@@ -1,20 +1,22 @@
 <template>
-  <div class="hero min-h-screen">
+  <div class="hero min-h-screen lg:min-h-80 lg:py-16">
     <div class="hero-content flex-col lg:flex-row">
       <div>
         <h1
-          class="text-4xl md:text-5xl font-bold text-center md:text-left pt-8 px-4 md:p-0"
+          class="text-4xl md:text-5xl font-bold text-center md:text-left pt-8 px-4 md:p-0 md:w-4/5"
         >
-          Compare the Best Outdoor Gear for Your Adventure
+          Comparez les meilleurs équipements outdoor pour vos aventures !
         </h1>
         <p class="py-6 px-4 md:px-0">
-          Unlock outdoor adventures effortlessly with our product comparator –
-          save time, discover exclusive deals, and make confident gear choices
-          for your next expedition.
+          Débloquez des aventures sans effort avec notre comparateur de
+          produits, gagnez du temps et faites des choix d'équipements simplement
+          !
         </p>
-        <NuxtLink to="categories" class="btn btn-primary"
-          >Start comparing !</NuxtLink
-        >
+        <div class="w-full flex justify-center md:justify-start">
+          <NuxtLink to="/categories" class="btn btn-primary">
+            Découvrir
+          </NuxtLink>
+        </div>
       </div>
       <div class="mx-8 mt-6">
         <div class="carousel rounded-box">
@@ -45,7 +47,6 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100vh; /* Adjust the height as needed */
 }
 
 .hero::before {
@@ -59,6 +60,6 @@
   left: 0;
   background: linear-gradient(to bottom right, #a3e635, #fdba74);
   filter: blur(45px);
-  opacity: 0.3;
+  opacity: 0.2;
 }
 </style>
