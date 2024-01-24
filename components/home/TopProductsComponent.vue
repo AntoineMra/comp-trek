@@ -20,7 +20,9 @@
       </ul>
     </nav>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8">
+    <div
+      class="min-h-40 w-1/2 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8 transition-all"
+    >
       <div
         class="card shadow-lg"
         v-for="product in showableProducts"
@@ -30,6 +32,12 @@
           <h2 class="card-title">{{ product.name }}</h2>
           <p class="text-sm text-gray-500">{{ product.category }}</p>
         </div>
+      </div>
+      <div
+        class="flex justify-center w-full"
+        v-if="showableProducts.length === 0"
+      >
+        <h2 class="text-center">Aucun produit à afficher</h2>
       </div>
     </div>
   </section>
@@ -52,7 +60,7 @@ const selectCategory = (category: string) => {
 };
 
 onBeforeMount(async () => {
-  //const response = await fetch('http://localhost:3000/api/categories');
+  //const response = await fetch(`${process.env.BASE_URL}/categories`);
   //categories.value = await response.json();
 
   categories.value = [
