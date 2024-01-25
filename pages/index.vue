@@ -1,5 +1,16 @@
 <template>
   <main>
+    <div class="hidden sm:block">
+      <nav class="flex items-center justify-center py-4">
+        <ul class="menu menu-vertical sm:menu-horizontal px-1">
+          <li v-for="mock in categories" :key="mock.id" class="px-2">
+            <NuxtLink class="font-bold" :to="`categories/${mock.id}`">
+              {{ mock.attributes.name }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <aside
       class="navbar bg-base-100 flex justify-center items-center flex-col md:flex-row"
     >
@@ -20,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onBeforeMount, ref } from "vue";
 import HeroComponent from "../components/home/HeroComponent.vue";
 import TopProductsComponent from "../components/home/TopProductsComponent.vue";
 import BlogComponent from "../components/home/BlogComponent.vue";
@@ -28,5 +39,15 @@ import ReinsuranceComponent from "../components/home/ReinsuranceComponent.vue";
 
 defineComponent({
   name: "IndexComponent",
+});
+
+const categories = ref<any[]>([]);
+
+onBeforeMount(() => {
+  fetch(`http://localhost:1337/api/categories`)
+    .then((res) => res.json())
+    .then((res) => {
+      categories.value = res.data;
+    });
 });
 </script>

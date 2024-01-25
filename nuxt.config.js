@@ -8,6 +8,9 @@ export default {
   components: true,
   buildModules: ["@pinia/nuxt", "@nuxtjs/tailwindcss"],
   css: ["@/assets/main.css"],
+  runtimeConfig: {
+    baseURL: process.env.BASE_URL || "http://localhost:1337",
+  },
   modules: [["@nuxtjs/google-fonts", { families: { Poppins: true } }]],
   postcss: {
     plugins: {

@@ -33,36 +33,11 @@
         />
       </div>
     </div>
-    <div class="hidden sm:block">
-      <nav class="flex items-center justify-center py-4">
-        <ul class="menu menu-vertical sm:menu-horizontal px-1">
-          <li v-for="mock in categories" :key="mock.id" class="px-2">
-            <NuxtLink class="font-bold" :to="`categories/${mock.id}`">
-              {{ mock.attribute.name }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </nav>
-    </div>
   </header>
 </template>
 
 <script setup lang="ts">
-import { onBeforeMount, ref } from "vue";
 import LogoIcon from "../UI/LogoIcon.vue";
-
-const categories = ref([
-  { id: 1, attribute: { name: "Catégorie 1", slug: "categorie-1" } },
-  { id: 2, attribute: { name: "Catégorie 2", slug: "categorie-2" } },
-]);
-
-onBeforeMount(() => {
-  fetch(`${process.env.BASE_URL}/categories`)
-    .then((res) => res.json())
-    .then((data) => {
-      categories.value = data;
-    });
-});
 </script>
 
 <style scoped></style>

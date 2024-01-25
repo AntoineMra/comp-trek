@@ -60,48 +60,17 @@ const selectCategory = (category: string) => {
 };
 
 onBeforeMount(async () => {
-  //const response = await fetch(`${process.env.BASE_URL}/categories`);
-  //categories.value = await response.json();
+  const response = await fetch(`http://localhost:1337/api/categories`);
+  const json = await response.json();
+  categories.value = json.data.map((category: any) => category.attributes.name);
 
-  categories.value = [
-    "Tentes",
-    "Sacs de randonnée",
-    "Sacs de couchage",
-    "Matelas",
-  ];
-
-  products.value = [
-    {
-      category: "Tentes",
-      name: "Tente 1",
-      rating: 4,
-    },
-    {
-      category: "Tentes",
-      name: "Tente 2",
-      rating: 4,
-    },
-    {
-      category: "Tentes",
-      name: "Tente 3",
-      rating: 4,
-    },
-    {
-      category: "Matelas",
-      name: "Matelas 1",
-      rating: 4,
-    },
-    {
-      category: "Matelas",
-      name: "Matelas 2",
-      rating: 4,
-    },
-    {
-      category: "Matelas",
-      name: "Matelas 3",
-      rating: 4,
-    },
-  ];
+  const responseProducts = await fetch(`http://localhost:1337/api/products`);
+  const jsonProducts = await responseProducts.json();
+  products.value = jsonProducts.data.map((product: any) => ({
+    category: product.attributes.category,
+    name: product.attributes.name,
+    rating: product.attributes.rating,
+  }));
 
   selected.value = categories.value[0];
 
