@@ -6,9 +6,9 @@ export default {
   },
   plugins: [],
   components: true,
-  buildModules: ["@pinia/nuxt", "@nuxtjs/tailwindcss", "@nuxtjs/google-fonts"],
+  buildModules: ["@pinia/nuxt", "@nuxtjs/tailwindcss"],
   css: ["@/assets/main.css"],
-  modules: [],
+  modules: [["@nuxtjs/google-fonts", { families: { Poppins: true } }]],
   postcss: {
     plugins: {
       tailwindcss: {},

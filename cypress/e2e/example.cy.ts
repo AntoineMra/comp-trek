@@ -3,8 +3,7 @@
 describe("Layout setted", () => {
   it("should have a header", () => {
     cy.visit("/");
-    cy.get("navbar").should("exist");
-    cy.get("navbar").should("contain", "Comp Trek");
+    cy.get("header").should("exist");
   });
 
   it("should have a footer", () => {

@@ -12,7 +12,7 @@
         >En savoir plus ></NuxtLink
       >
     </aside>
-    <HeroComponent />
+    <h1>TODO BLOG</h1>
     <TopProductsComponent />
     <BlogComponent />
     <ReinsuranceComponent />
@@ -21,7 +21,6 @@
 
 <script setup lang="ts">
 import { defineComponent } from "vue";
-import HeroComponent from "../components/home/HeroComponent.vue";
 import TopProductsComponent from "../components/home/TopProductsComponent.vue";
 import BlogComponent from "../components/home/BlogComponent.vue";
 import ReinsuranceComponent from "../components/home/ReinsuranceComponent.vue";

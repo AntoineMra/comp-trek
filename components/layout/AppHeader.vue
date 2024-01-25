@@ -13,13 +13,13 @@
       <nav class="flex-none">
         <ul class="menu menu-horizontal px-1 sm:pr-8">
           <li class="px-2">
-            <NuxtLink class="font-semibold" to="products">Produits</NuxtLink>
+            <NuxtLink class="font-semibold" to="/products">Produits</NuxtLink>
           </li>
           <li class="px-2">
-            <NuxtLink class="font-semibold" to="kits">Kits & Packs</NuxtLink>
+            <NuxtLink class="font-semibold" to="/kits">Kits & Packs</NuxtLink>
           </li>
           <li class="px-2">
-            <NuxtLink class="font-semibold" to="blog">Blog</NuxtLink>
+            <NuxtLink class="font-semibold" to="/blog">Blog</NuxtLink>
           </li>
         </ul>
       </nav>
@@ -44,16 +44,6 @@
         </ul>
       </nav>
     </div>
-    <aside class="navbar bg-base-100 justify-center items-center">
-      <p class="font-sm px-4 sm:p-0 sm:flex-row flex flex-col">
-        Vous apportez un point de vue de qualité est notre mission.
-        L’utilisation des liens d’affiliations nous permet d’améliorer en
-        continue nos analyses.
-        <NuxtLink to="affiliate" class="font-bold my-2 sm:my-0">
-          En savoir plus >
-        </NuxtLink>
-      </p>
-    </aside>
   </header>
 </template>
 

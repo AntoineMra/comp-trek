@@ -39,6 +39,6 @@
 
 <style scoped>
 .st1 {
-  fill: #111111;
+  fill: #2c3e50;
 }
 </style>
