@@ -1,216 +1,95 @@
 <!-- eslint-disable max-len -->
 <template>
-  <div>{{ content }}</div>
+  <div class="rich-editor">{{ content }}</div>
 </template>
 
 <script setup lang="ts">
-import { ref, type PropType } from "vue";
-import type { RichEditor } from "../../interface/product";
+import { onBeforeMount, ref } from "vue";
 
 const content = ref("");
 
-defineProps({
+const props = defineProps({
   editorContent: {
-    type: Array as PropType<RichEditor[]>,
+    type: String,
     required: true,
   },
 });
 
-const mock = [
-  {
-    type: "paragraph",
-    children: [
-      {
-        text: "Forclaz propose « enfin » un sac à dos de trekking léger, en s’inspirant peut être quelque peu du sac à dos osprey levity 45 bien connu dans le monde de la randonnée légère et que ses utilisateurs adorent. Ce tout nouveau sac à dos a des arguments, comme un poids léger de seulement 1,3kg pour une contenance totale de 60 litres (50l + 10l dans la capuche du sac) soit un rapport poids / volume très intéressant. Il mérite que l’on s’y penche de plus près.",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "paragraph",
-    children: [
-      {
-        text: "",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "paragraph",
-    children: [
-      {
-        text: "Il s’agit bien ici d’un sac léger qui ne fait pas de compromis sur la solidité. Decathlon souhaite clairement faire son entrée dans le Monde de la randonnée légère, une vrai tendance.",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "paragraph",
-    children: [
-      {
-        text: "",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "paragraph",
-    children: [
-      {
-        text: "Dimensions :",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "paragraph",
-    children: [
-      {
-        text: "",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "paragraph",
-    children: [
-      {
-        text: "Hauteur: 65cm",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "paragraph",
-    children: [
-      {
-        text: "Largeur: 35cm",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "paragraph",
-    children: [
-      {
-        text: "Profondeur: 30cm",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "paragraph",
-    children: [
-      {
-        text: "",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "heading",
-    level: 2,
-    children: [
-      {
-        text: "Composition :",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "paragraph",
-    children: [
-      {
-        text: "Compartiment principal 100% Polyamide, Doublure 100% Polyamide, Empiècement 100% Polyamide, Sangle 100% Polypropylène, Couvre sac 100% Polyester, Enduction 100% Polyuréthane.",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "paragraph",
-    children: [
-      {
-        text: "",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "heading",
-    level: 2,
-    children: [
-      {
-        text: "On a aimé : ",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "list",
-    format: "unordered",
-    children: [
-      {
-        type: "list-item",
-        children: [
-          {
-            text: "AGSD",
-            type: "text",
-          },
-        ],
-      },
-      {
-        type: "list-item",
-        children: [
-          {
-            text: "AAZA",
-            type: "text",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    type: "heading",
-    level: 2,
-    children: [
-      {
-        text: "On a moins aimé : ",
-        type: "text",
-      },
-    ],
-  },
-  {
-    type: "list",
-    format: "unordered",
-    children: [
-      {
-        type: "list-item",
-        children: [
-          {
-            text: "azaz",
-            type: "text",
-          },
-        ],
-      },
-      {
-        type: "list-item",
-        children: [
-          {
-            text: "azz",
-            type: "text",
-          },
-        ],
-      },
-      {
-        type: "list-item",
-        children: [
-          {
-            text: "Azaz",
-            type: "text",
-          },
-        ],
-      },
-    ],
-  },
-];
+onBeforeMount(() => {
+  content.value = parseMarkdown(props.editorContent);
+});
+
+// This function take a string that contains markdown and return as html
+const parseMarkdown = (content: string) => {
+  const markdown = require("markdown-it")({
+    html: true,
+    linkify: true,
+    typographer: true,
+  });
+  const result = markdown.render(content);
+  return result;
+};
 </script>
+
+<style scoped lang="scss">
+.rich-editor {
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+
+  ul {
+    list-style: disc;
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  ol {
+    list-style: decimal;
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
+
+  li {
+    margin: 0.5rem 0;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  a {
+    color: #4d7c0f;
+    text-decoration: none;
+  }
+
+  a:hover {
+    transition: all 0.3s ease-in-out;
+    color: #a3e635;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  blockquote {
+    border-left: 0.25rem solid #ddd;
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
+}
+</style>
