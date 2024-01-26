@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="hidden sm:block">
+    <div class="hidden sm:block" v-if="categories.length !== 0">
       <nav class="flex items-center justify-center py-4">
         <ul class="menu menu-vertical sm:menu-horizontal px-1">
           <li v-for="mock in categories" :key="mock.id" class="px-2">
@@ -12,7 +12,7 @@
       </nav>
     </div>
     <aside
-      class="navbar bg-base-100 flex justify-center items-center flex-col md:flex-row"
+      class="navbar bg-slate-50 flex justify-center items-center flex-col md:flex-row"
     >
       <p class="font-sm pt-2 px-2 md:p-0">
         Vous apportez un point de vue de qualité est notre mission.
