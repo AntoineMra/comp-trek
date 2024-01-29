@@ -12,20 +12,45 @@
         >En savoir plus ></NuxtLink
       >
     </aside>
-    <h1>TODO BLOG</h1>
-    <TopProductsComponent />
-    <BlogComponent />
-    <ReinsuranceComponent />
+    <div class="mt-16 mb-8">
+      <h1 class="text-4xl font-bold text-center">Bienvenue sur notre blog !</h1>
+      <p>
+        Venez découvrir notre univers en plongeant des nos articles pour
+        découvrir le monde de la randonnée et du trekking.
+      </p>
+    </div>
+
+    <div class="">
+      <h2>Notre dernière article</h2>
+
+      <div class="card shadow-lg">
+        <div class="card-body">
+          <h2 class="card-title">
+            Comment choisir son sac à dos de randonnée ?
+          </h2>
+          <p class="text-sm text-gray-500">Randonnée</p>
+        </div>
+      </div>
+    </div>
+
+    <AppPagination :articles="articles" />
   </main>
 </template>
 
 <script setup lang="ts">
-import { defineComponent } from "vue";
-import TopProductsComponent from "../components/home/TopProductsComponent.vue";
-import BlogComponent from "../components/home/BlogComponent.vue";
-import ReinsuranceComponent from "../components/home/ReinsuranceComponent.vue";
+import { defineComponent, onBeforeMount, ref } from "vue";
+import AppPagination from "../components/layout/AppPagination.vue";
 
 defineComponent({
-  name: "IndexComponent",
+  name: "BlogComponent",
+});
+
+const articles = ref<any[]>([]);
+
+onBeforeMount(async () => {
+  const response = await fetch(`http://localhost:1337/api/articles`);
+  const json = await response.json();
+
+  articles.value = json.data;
 });
 </script>

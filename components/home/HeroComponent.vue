@@ -9,7 +9,7 @@
     <div class="hero-content z-10 flex-col lg:flex-row">
       <div class="w-full">
         <h1
-          class="text-4xl text-white md:text-5xl font-bold text-center md:text-left pt-8 px-4 md:p-0 md:w-4/5"
+          class="text-4xl text-white md:text-5xl font-bold text-center md:text-left pt-8 px-4 md:p-0 md:w-4/5 md:leading-[3.6rem]"
         >
           Comparez les meilleurs équipements outdoor pour vos aventures !
         </h1>
@@ -48,7 +48,6 @@ import bg from "@/assets/hero-backpacker.png";
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("~@/assets/hero-backpack.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -67,8 +66,8 @@ import bg from "@/assets/hero-backpacker.png";
   left: 0;
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.65)
   );
 }
 </style>

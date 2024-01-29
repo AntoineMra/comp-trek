@@ -1,6 +1,6 @@
 <!-- eslint-disable max-len -->
 <template>
-  <section class="px-12 md:px-32">
+  <section class="px-12 md:px-32 py-12" v-if="showableProducts.length !== 0">
     <div class="py-8">
       <h2 class="text-xl md:text-3xl font-bold text-center">
         Découvrez nos produits les mieux notés !
@@ -9,13 +9,13 @@
     <nav w-40 mx-auto>
       <ul class="flex flex-wrap justify-center items-center">
         <li class="px-4" v-for="category in categories" :key="category">
-          <btn
+          <button
             class="btn"
             @click="selectCategory(category)"
             :class="selected === category ? 'btn-primary' : 'btn-ghost'"
           >
             {{ category }}
-          </btn>
+          </button>
         </li>
       </ul>
     </nav>
@@ -32,12 +32,6 @@
           <h2 class="card-title">{{ product.name }}</h2>
           <p class="text-sm text-gray-500">{{ product.category }}</p>
         </div>
-      </div>
-      <div
-        class="flex justify-center w-full"
-        v-if="showableProducts.length === 0"
-      >
-        <h2 class="text-center">Aucun produit à afficher</h2>
       </div>
     </div>
   </section>

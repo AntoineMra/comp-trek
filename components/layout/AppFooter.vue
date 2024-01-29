@@ -1,16 +1,16 @@
 <template>
   <footer class="footer md:grid flex flex-wrap p-10 text-neutral-content">
     <nav class="mx-auto">
-      <header class="text-primary text-lg font-bold">Produits</header>
-      <NuxtLink to="/cookies" class="link link-hover">Branding</NuxtLink>
-      <NuxtLink to="/cookies" class="link link-hover">Design</NuxtLink>
-      <NuxtLink to="/cookies" class="link link-hover">Marketing</NuxtLink>
-      <NuxtLink to="/cookies" class="link link-hover">Advertisement</NuxtLink>
+      <header class="text-primary text-lg font-bold">Comparateur</header>
+      <NuxtLink to="/categories" class="link link-hover">Catégories</NuxtLink>
+      <NuxtLink to="/products" class="link link-hover">Produits</NuxtLink>
+      <NuxtLink to="/kits" class="link link-hover">Kits</NuxtLink>
     </nav>
     <nav class="mx-auto">
-      <header class="text-primary text-lg font-bold">Contact</header>
+      <header class="text-primary text-lg font-bold">Comp Trek</header>
       <NuxtLink to="/cookies" class="link link-hover">A propos</NuxtLink>
-      <NuxtLink to="/cookies" class="link link-hover">Support</NuxtLink>
+      <NuxtLink to="/contact" class="link link-hover">Contact</NuxtLink>
+      <NuxtLink to="/blog" class="link link-hover">Blog</NuxtLink>
     </nav>
     <nav class="mx-auto">
       <header class="text-primary text-lg font-bold">
