@@ -24,15 +24,6 @@
         </ul>
       </nav>
     </div>
-    <div class="py-4 w-full flex justify-center items-center sm:hidden">
-      <div class="form-control">
-        <input
-          type="text"
-          placeholder="Search"
-          class="input input-bordered w-40"
-        />
-      </div>
-    </div>
   </header>
 </template>
 
