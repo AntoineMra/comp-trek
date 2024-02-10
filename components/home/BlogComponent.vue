@@ -42,11 +42,11 @@
             </NuxtLink>
           </div>
         </div>
-        <div class="pt-16 w-1/2">
+        <div class="mt-16 lg:mt-0 lg:mx-8 w-full lg:w-1/2 mx-auto">
           <img
-            src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+            src="@/assets/hiker-grinding-trail.jpg"
             alt="Hiker"
-            class="w-full h-96 object-cover"
+            class="w-full h-96 object-cover rounded-xl shadow-xl"
           />
         </div>
       </div>

@@ -21,7 +21,7 @@
     </nav>
 
     <div
-      class="min-h-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-16 transition-all"
+      class="min-h-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-16 transition-all"
     >
       <div
         class="card shadow-lg"
@@ -37,7 +37,9 @@
 
         <div class="card-body">
           <h2 class="card-title">{{ product.name }}</h2>
-          <div class="badge badge-secondary">{{ product.tag }}</div>
+          <div v-if="product.tag" class="badge badge-secondary">
+            {{ product.tag }}
+          </div>
           <div class="card-actions justify-between pt-6">
             <div class="badge badge-outline">
               {{ product.category.data.attributes.name }}
@@ -64,7 +66,9 @@ const selected = ref("");
 const selectCategory = (category: string) => {
   selected.value = category;
   showableProducts.value = products.value
-    .filter((product) => product.category === selected.value)
+    .filter(
+      (product) => product.category.data.attributes.name === selected.value,
+    )
     .slice(0, 3);
 };
 
