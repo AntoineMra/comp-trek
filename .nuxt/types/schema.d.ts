@@ -14,11 +14,9 @@ declare module 'nuxt/schema' {
 
       cdnURL: string,
    },
-
-   baseURL: string,
   }
   interface PublicRuntimeConfig {
-
+   API_BASE_URL: string,
   }
 }
 declare module 'vue' {

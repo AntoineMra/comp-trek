@@ -3,6 +3,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     'UIAffiliateHeader': typeof import("../components/UI/AffiliateHeader.vue")['default']
     'UILogoIcon': typeof import("../components/UI/LogoIcon.vue")['default']
+    'BlogArticleCard': typeof import("../components/blog/ArticleCard.vue")['default']
     'HomeBlogComponent': typeof import("../components/home/BlogComponent.vue")['default']
     'HomeHeroComponent': typeof import("../components/home/HeroComponent.vue")['default']
     'HomeReinsuranceComponent': typeof import("../components/home/ReinsuranceComponent.vue")['default']
@@ -34,6 +35,7 @@ declare module 'vue' {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyUIAffiliateHeader': typeof import("../components/UI/AffiliateHeader.vue")['default']
     'LazyUILogoIcon': typeof import("../components/UI/LogoIcon.vue")['default']
+    'LazyBlogArticleCard': typeof import("../components/blog/ArticleCard.vue")['default']
     'LazyHomeBlogComponent': typeof import("../components/home/BlogComponent.vue")['default']
     'LazyHomeHeroComponent': typeof import("../components/home/HeroComponent.vue")['default']
     'LazyHomeReinsuranceComponent': typeof import("../components/home/ReinsuranceComponent.vue")['default']
@@ -68,6 +70,7 @@ declare module 'vue' {
 
 export const UIAffiliateHeader: typeof import("../components/UI/AffiliateHeader.vue")['default']
 export const UILogoIcon: typeof import("../components/UI/LogoIcon.vue")['default']
+export const BlogArticleCard: typeof import("../components/blog/ArticleCard.vue")['default']
 export const HomeBlogComponent: typeof import("../components/home/BlogComponent.vue")['default']
 export const HomeHeroComponent: typeof import("../components/home/HeroComponent.vue")['default']
 export const HomeReinsuranceComponent: typeof import("../components/home/ReinsuranceComponent.vue")['default']
@@ -99,6 +102,7 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyUIAffiliateHeader: typeof import("../components/UI/AffiliateHeader.vue")['default']
 export const LazyUILogoIcon: typeof import("../components/UI/LogoIcon.vue")['default']
+export const LazyBlogArticleCard: typeof import("../components/blog/ArticleCard.vue")['default']
 export const LazyHomeBlogComponent: typeof import("../components/home/BlogComponent.vue")['default']
 export const LazyHomeHeroComponent: typeof import("../components/home/HeroComponent.vue")['default']
 export const LazyHomeReinsuranceComponent: typeof import("../components/home/ReinsuranceComponent.vue")['default']
